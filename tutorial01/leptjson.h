@@ -9,9 +9,9 @@ typedef struct {
 
 enum {
     LEPT_PARSE_OK = 0,
-    LEPT_PARSE_EXPECT_VALUE,
-    LEPT_PARSE_INVALID_VALUE,
-    LEPT_PARSE_ROOT_NOT_SINGULAR
+    LEPT_PARSE_EXPECT_VALUE,   //若json文本值只含空白
+    LEPT_PARSE_INVALID_VALUE, //若值不是那三种值
+    LEPT_PARSE_ROOT_NOT_SINGULAR //若空白后还有其他字符
 };
 
 int lept_parse(lept_value* v, const char* json);
